@@ -1,0 +1,30 @@
+#pragma once
+
+//#define USE_MATRIX_I2C
+#define FORCE_NKRO
+
+#define MASTER_LEFT
+
+#define SSD1306OLED
+
+#define USE_SERIAL_PD2
+
+#define TAPPING_FORCE_HOLD
+#define TAPPING_TERM 200
+
+#ifdef RGBLIGHT_ENABLE
+    #undef RGBLED_NUM
+
+    #define RGBLIGHT_EFFECT_STATIC_GRADIENT
+    #define RGBLIGHT_EFFECT_CHRISTMAS
+    #define RGBLIGHT_EFFECT_KNIGHT  
+
+    #define RGBLIGHT_LAYERS
+    #define RGBLED_NUM 27
+    #define RGBLIGHT_LIMIT_VAL 120
+    #define RGBLIGHT_HUE_STEP 15
+    #define RGBLIGHT_SAT_STEP 17
+    #define RGBLIGHT_VAL_STEP 17
+    #define RGBLIGHT_LAYERS_OVERRIDE_RGB_OFF
+#endif
+
