@@ -34,7 +34,7 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define FI_SECT KC_GRV  // §
+#define FI_SECT KC_NUBS // §
 #define FI_1    KC_1    // 1
 #define FI_2    KC_2    // 2
 #define FI_3    KC_3    // 3
@@ -74,7 +74,7 @@
 #define FI_ADIA KC_QUOT // Ä
 #define FI_QUOT KC_NUHS // '
 // Row 4
-#define FI_LABK KC_NUBS // <
+#define FI_LABK KC_GRV  // <
 #define FI_Z    KC_Z    // Z
 #define FI_X    KC_X    // X
 #define FI_C    KC_C    // C
@@ -141,13 +141,13 @@
 #define FI_PND  ALGR(FI_3)    // £
 #define FI_DLR  ALGR(FI_4)    // $
 #define FI_EURO ALGR(FI_5)    // €
-#define FI_LCBR ALGR(FI_7)    // {
+#define FI_LCBR SAGR(FI_8)    // {
 #define FI_LBRC ALGR(FI_8)    // [
 #define FI_RBRC ALGR(FI_9)    // ]
-#define FI_RCBR ALGR(FI_0)    // }
-#define FI_BSLS ALGR(FI_PLUS) // (backslash)
+#define FI_RCBR SAGR(FI_9)    // }
+#define FI_BSLS SAGR(FI_7) // (backslash)
 // Row 2
 #define FI_TILD ALGR(FI_DIAE) // ~ (dead)
 // Row 4
-#define FI_PIPE ALGR(FI_LABK) // |
+#define FI_PIPE ALGR(FI_7) // |
 #define FI_MICR ALGR(FI_M)    // µ
