@@ -99,11 +99,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_ADJUST] = LAYOUT(
   //,-----------------------------------------.                ,-----------------------------------------.
-      RESET,RGBRST, KC_NO, KC_NO, KC_NO, RGB_RMOD,              KC_NO,KC__VOLUP, KC_MEDIA_NEXT_TRACK, KC_NO, KC_NO, KC_NO, 
+      RESET,RGBRST, KC_NO, KC_NO, KC_NO, RGB_RMOD,              KC__VOLUP, KC_NO, KC_MEDIA_NEXT_TRACK, KC_NO, KC_NO, KC_NO, 
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-    RGB_TOG,RGB_HUI,RGB_SAI,RGB_VAI,RGB_SPI,KC_NO,              KC_PAUSE,KC__MUTE, KC_MEDIA_PLAY_PAUSE, KC_NO, KC_NO, KC_NO,
+    RGB_TOG,RGB_HUI,RGB_SAI,RGB_VAI,RGB_SPI,KC_NO,              KC__MUTE, LGUI(KC_F7), LGUI(KC_F8), LGUI(KC_F9), KC_NO, KC_NO,
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-    RGB_MOD,RGB_HUD,RGB_SAD,RGB_VAD,RGB_SPD,KC_NO,              KC_NO,KC__VOLDOWN, KC_NO, KC_NO, KC_NO,TG(_FUNCTION) ,
+    RGB_MOD,RGB_HUD,RGB_SAD,RGB_VAD,RGB_SPD,KC_NO,              KC__VOLDOWN, KC_NO, KC_NO, KC_NO, KC_NO,KC_NO ,
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                 KC_LGUI, LOWER,KC_SPC,   KC_ENT, RAISE,KC_RALT
                               //`--------------------'  `--------------------'
