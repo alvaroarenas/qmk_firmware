@@ -57,7 +57,7 @@ enum custom_keycodes {
 #define KC_VOLUP   0x80
 #define KC_VOLDOWN 0x81
 #define KC_VOLOFF  0x7f
-
+#define LAG(kc) (QK_LALT | QK_LGUI | (kc))
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -75,9 +75,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT(
   //,---------------------------------------------.                ,-----------------------------------------.
-   KC_GUITAB,  KC_1, KC_2,   KC_3,   KC_4,   KC_5,                    KC_6,  KC_7,  KC_8,  KC_9,  KC_0, KC_DEL,
+   LGUI(KC_GRV),  KC_1, KC_2,   KC_3,   KC_4,   KC_5,                    KC_6,  KC_7,  KC_8,  KC_9,  KC_0, KC_DEL,
   //|------+------+-------+-------+-------+-------|                |------+------+------+------+------+------|
-   KC_LCTL,KC_NO,KC_NO,KC_NO,KC_NO,KC_NO,                           KC_LEFT,KC_DOWN,KC_UP,KC_RIGHT,FI_ODIA,FI_ADIA,
+   LGUI(KC_GRV),LAG(KC_1),LAG(KC_2),LAG(KC_3),LAG(KC_4),LAG(KC_5),   KC_LEFT,KC_DOWN,KC_UP,KC_RIGHT,FI_ODIA,FI_ADIA,
   //|------+------+-------+-------+-------+-------|                |------+------+------+------+------+------|
    KC_LSFT,KC_UNDO,KC_CUT,KC_COPY,KC_PASTE,KC_CLOSEW,                KC_HOME,KC_PGDN,KC_PGUP,KC_END,FI_TILD,KC_NO,
   //|------+------+-------+-------+-------+-------+------|  |------+------+------+------+------+------+------|
@@ -99,11 +99,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_ADJUST] = LAYOUT(
   //,-----------------------------------------.                ,-----------------------------------------.
-      RESET,RGBRST, KC_NO, KC_NO, KC_NO, RGB_RMOD,              KC__VOLUP, KC_NO, KC_MEDIA_NEXT_TRACK, KC_NO, KC_NO, KC_NO, 
+    RGBRST,LCA(KC_Q),LCA(KC_W),LCA(KC_E),LCA(KC_R),LCA(KC_T),  KC__VOLUP,LCA(KC_U), LCA(KC_I),  LCA(KC_O), LCA(KC_P), KC_NO, 
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-    RGB_TOG,RGB_HUI,RGB_SAI,RGB_VAI,RGB_SPI,KC_NO,              KC__MUTE, LGUI(KC_F7), LGUI(KC_F8), LGUI(KC_F9), KC_NO, KC_NO,
+    RGB_TOG,LCA(KC_A),LCA(KC_S),LCA(KC_D),LCA(KC_F),LCA(KC_G), KC__MUTE,LCA(KC_J), LCA(KC_K),  LCA(KC_L), FI_QUOT, FI_DQUO,
   //|------+------+------+------+------+------|                |------+------+------+------+------+------|
-    RGB_MOD,RGB_HUD,RGB_SAD,RGB_VAD,RGB_SPD,KC_NO,              KC__VOLDOWN, KC_NO, KC_NO, KC_NO, KC_NO,KC_NO ,
+    RGB_MOD,LCA(KC_Z),LCA(KC_X),LCA(KC_C),LCA(KC_V),LCA(KC_B), KC__VOLDOWN,LCA(KC_M), LCA(KC_COMM),LCA(KC_DOT), LCA(FI_MINS), KC_NO, 
   //|------+------+------+------+------+------+------|  |------+------+------+------+------+------+------|
                                 KC_LGUI, LOWER,KC_SPC,   KC_ENT, RAISE,KC_RALT
                               //`--------------------'  `--------------------'
